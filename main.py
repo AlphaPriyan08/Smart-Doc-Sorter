@@ -78,28 +78,5 @@ if __name__ == "__main__":
         print(f"Input '{args.input_source[:50]}...' treated as raw string content.")
 
 
-    # sample_dir = "sample_inputs"
-    # if not os.path.exists(sample_dir): os.makedirs(sample_dir)
-
-    # sample_pdf_path = os.path.join(sample_dir, "sample_invoice.pdf")
-    # if not os.path.exists(sample_pdf_path):
-    #     try:
-    #         from reportlab.pdfgen import canvas
-    #         c = canvas.Canvas(sample_pdf_path)
-    #         c.drawString(72, 720, "Sample Invoice: Pay $100 for INV001 by due date.")
-    #         c.save()
-    #     except: pass
-
-    # sample_email_path = os.path.join(sample_dir, "sample_rfq.eml")
-    # if not os.path.exists(sample_email_path):
-    #     with open(sample_email_path, "w") as f:
-    #         f.write("From: test@example.com\nSubject: RFQ for Widgets\nBody: Please provide a quote for 1000 widgets.")
-
-    # sample_json_path = os.path.join(sample_dir, "sample_complaint.json")
-    # if not os.path.exists(sample_json_path):
-    #     with open(sample_json_path, "w") as f:
-    #         json.dump({"invoice_number": "INV123", "complaint_details": "Product broke."}, f)
-
-
     print("\n--- Running System with CLI Argument ---")
     run_system(input_content_or_path, is_file_path=input_is_file)
