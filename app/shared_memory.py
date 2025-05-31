@@ -1,12 +1,12 @@
 import redis
 import json
-from datetime import datetime, timezone # Use timezone-aware UTC
+from datetime import datetime, timezone 
 
 class SharedMemory:
     def __init__(self, host='localhost', port=6379):
         try:
             self.redis_client = redis.Redis(host=host, port=port, db=0, decode_responses=True)
-            self.redis_client.ping() # Check connection
+            self.redis_client.ping()
             print("Successfully connected to Redis.")
         except redis.exceptions.ConnectionError as e:
             print(f"Error connecting to Redis: {e}. SharedMemory will not function.")
@@ -24,13 +24,13 @@ class SharedMemory:
             if existing_raw:
                 try:
                     history = json.loads(existing_raw)
-                    if not isinstance(history, list): # Ensure it's a list
+                    if not isinstance(history, list):
                        history = [history] 
                 except json.JSONDecodeError:
                     print(f"Warning: Could not decode existing JSON for key {key}. Starting new history.")
-                    history = [] # Or handle as an error / corruption
+                    history = [] 
             
-            data['timestamp'] = datetime.now(timezone.utc).isoformat() # Use timezone-aware UTC
+            data['timestamp'] = datetime.now(timezone.utc).isoformat() 
             history.append(data)
             self.redis_client.set(key, json.dumps(history))
         except redis.exceptions.RedisError as e:
