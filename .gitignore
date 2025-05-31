@@ -4,6 +4,7 @@ __pycache__/
 *.pyc
 *.log
 *.sqlite3
+.env
 
 # Ignore the local Redis distribution
 Redis-x64-5.0.14.1/
