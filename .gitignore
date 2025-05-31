@@ -1,0 +1,13 @@
+venv/
+__pycache__/
+.env
+*.pyc
+*.log
+*.sqlite3
+
+# Ignore the local Redis distribution
+Redis-x64-5.0.14.1/
+
+# IDE specific
+.vscode/
+.idea/
