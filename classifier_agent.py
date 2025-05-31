@@ -256,7 +256,7 @@ class ClassifierAgent:
                 agent_output = {"extracted_pdf_text_snippet": "PDF PARSING FAILED."}
             else: 
                 agent_output = {"extracted_pdf_text_snippet": text_content_for_intent[:500] if text_content_for_intent else "No text extracted or PDF empty."}
-            final_log_payload["extracted_values"] = agent_outputss
+            final_log_payload["extracted_values"] = agent_output
         
         elif doc_format == 'TextFile' or doc_format == 'Text':
             agent_output = {"text_content_snippet": text_content_for_intent[:500] if text_content_for_intent else "No text content."}
