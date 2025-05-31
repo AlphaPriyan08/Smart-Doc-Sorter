@@ -1,0 +1,8 @@
+{
+  "invoice_number": "INV-2024-03-001",
+  "date": "2024-03-18",
+  "amount": 1250.75,
+  "vendor": "Acme Corp Solutions",
+  "customer_name": "Beta Industries Ltd.",
+  "item_description": "Consulting Services Rendered - Project Phoenix"
+}
