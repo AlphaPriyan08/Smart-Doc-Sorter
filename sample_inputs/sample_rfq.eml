@@ -1,3 +1,18 @@
-From: test@example.com
-Subject: RFQ for Widgets
-Body: Please provide a quote for 1000 widgets.
+From: procurement@example.com
+To: sales@supplier.com
+Subject: RFQ - Bulk Order of Widgets - URGENT
+Date: Mon, 1 Apr 2024 10:00:00 +0000
+Message-ID: <12345.random.id@example.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+Dear Supplier,
+
+We are interested in obtaining a quotation for 10,000 units of your standard widget (Part #WID-001).
+Please provide pricing, availability, and estimated delivery time.
+This is an urgent request.
+
+Regards,
+Procurement Team
+Example Corporation
